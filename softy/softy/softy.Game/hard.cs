@@ -11,10 +11,21 @@ namespace softy
     {
         public override async Task Execute()
         {
+            int lenght=0;
             while(Game.IsRunning)
             {
                 await Script.NextFrame();
-                Entity.Transform.Position.X += 0.01f;
+                if (lenght<50)
+                {
+                    lenght += 1;
+                    Entity.Transform.Position.X -= 0.1f;
+                }else
+                    while (lenght>-40)
+                    {
+                        await Script.NextFrame();
+                        lenght -= 1;
+                        Entity.Transform.Position.X += 0.1f;
+                    }
             }
 
 
