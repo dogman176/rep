@@ -11,24 +11,23 @@ namespace softy
     {
         public override async Task Execute()
         {
-            int lenght=0;
-            while(Game.IsRunning)
+            while (Game.IsRunning)
             {
                 await Script.NextFrame();
-                if (lenght<50)
+                if (Input.IsKeyDown(Keys.Y))
                 {
-                    lenght += 1;
-                    Entity.Transform.Position.X -= 0.1f;
-                }else
-                    while (lenght>-40)
+                    if (Entity.Transform.Position.Y < 4)
                     {
-                        await Script.NextFrame();
-                        lenght -= 1;
-                        Entity.Transform.Position.X += 0.1f;
+                        Entity.Transform.Position.Y += 0.1f;
                     }
+                    else
+                        while (Entity.Transform.Position.Y > 0)
+                        {
+                            await Script.NextFrame();
+                        }
+                }
+
             }
-
-
         }
     }
 }
