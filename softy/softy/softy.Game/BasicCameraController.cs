@@ -71,6 +71,7 @@ namespace softy
                 translation.Z = KeyboardMovementSpeed.Z;
             }
 
+            /* 
             if (Input.IsKeyDown(Keys.A) || Input.IsKeyDown(Keys.Left))
             {
                 translation.X = -KeyboardMovementSpeed.X;
@@ -79,7 +80,7 @@ namespace softy
             {
                 translation.X = KeyboardMovementSpeed.X;
             }
-
+            */
             if (Input.IsKeyDown(Keys.Q))
             {
                 translation.Y = -KeyboardMovementSpeed.Y;

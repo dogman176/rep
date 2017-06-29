@@ -1,35 +1,59 @@
 ﻿using System;
 using System.Threading.Tasks;
-using SiliconStudio.Core;
-using SiliconStudio.Core.Mathematics;
+using SiliconStudio.Xenko.Input;
+using SiliconStudio.Core.Native;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Rendering.Sprites;
 
 namespace softy
 {
-    
 
-    public class SpriteTest : SyncScript
+
+    public class SpriteTest : AsyncScript
     {
-        // Declared public member fields and properties are displayed in Game Studio.
         private SpriteFromSheet sprite;
-        private DateTime lastFrame;
+        private int Stuff=0;
 
-        public override void Start()
+        public override async Task Execute()
         {
-            // Initialize the script.
             sprite = Entity.Get<SpriteComponent>().SpriteProvider as SpriteFromSheet;
-            lastFrame = DateTime.Now;
-        }
 
-        public override void Update()
+            while (Game.IsRunning)
+            {
+                await Script.NextFrame();
+                if (Input.KeyDown.Count < 1 && sprite.CurrentFrame != 1)
+                {
+                    sprite.CurrentFrame = 1;
+                }else
+                    if(Input.IsKeyDown(Keys.A))
+                {
+                    Anim(Keys.A);
+                }else
+                    if (Input.IsKeyDown(Keys.D))
+                {
+                    Anim(Keys.D);
+                }
+            }
+        }
+        private void Anim(Keys PKey)
         {
-            // Do something every new frame.
-            if ((DateTime.Now - lastFrame) > new TimeSpan(0, 0, 0))
+            if (PKey == Keys.A)
+            {
+                Entity.Transform.Scale.X = -1;
+                Entity.Transform.Position.X -= 0.1f;
+            }
+            else
+            if (PKey == Keys.D)
+            {
+                Entity.Transform.Scale.X = 1;
+                Entity.Transform.Position.X += 0.1f;
+            }
+            if (Stuff > 5)
             {
                 sprite.CurrentFrame += 1;
-                lastFrame = DateTime.Now;
+                Stuff = 0;
             }
+            Stuff++; 
         }
     }
 }
