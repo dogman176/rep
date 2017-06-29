@@ -24,6 +24,7 @@ namespace softy
                         while (Entity.Transform.Position.Y > 0)
                         {
                             await Script.NextFrame();
+                            Entity.Transform.Position.Y -= 0.1f;
                         }
                 }
 

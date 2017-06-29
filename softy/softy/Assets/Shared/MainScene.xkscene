@@ -10,7 +10,7 @@ Hierarchy:
         - 28777f3f-2e70-46cc-96d6-d5180ad62d7c
         - 59943604-2dc0-4bdf-845f-a0934e13cc67
         - 7568e5b9-df51-4d94-bd2c-aa465b2e9034
-        - 79bae49e-d46f-48f3-a8c2-bc3ac41375ca
+        - e403335f-cda9-4121-9c46-975cbbb719ed
     Parts:
         -   Entity:
                 Id: 0d819940-5e9b-464c-a496-48378a792cdb
@@ -93,17 +93,19 @@ Hierarchy:
                     20ec9f802ac3d07833aeb631860ec484: !softy.hard,softy.Game
                         Id: 32fe8172-079e-42c8-b8ea-04e80a775b52
         -   Entity:
-                Id: 79bae49e-d46f-48f3-a8c2-bc3ac41375ca
-                Name: spr_player
+                Id: e403335f-cda9-4121-9c46-975cbbb719ed
+                Name: Entity
                 Components:
-                    e30c0bb6bed4fe8efd8afe48887b9737: !TransformComponent
-                        Id: cfc3ccc6-2ed4-4a99-80d7-d8af1f292463
-                        Position: {X: 2.195746, Y: 1.18641388, Z: 4.67056227}
+                    ee682a9a845a53879968079a91b9fead: !TransformComponent
+                        Id: 353031a8-76b0-4ee6-8696-6ccabcbce9d6
+                        Position: {X: 7.610937, Y: 0.0, Z: -17.0373783}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
-                    c47d2c0989beb432c30d5f5a4e97a108: !SpriteComponent
-                        Id: 0f8127c1-102f-41ed-b6ea-59f9766b2dd4
+                    4c3968c8b3ad3ddf6f244248745b0f0d: !SpriteComponent
+                        Id: 1f652581-5e5d-439c-a9e3-dfeaebe0b39f
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: null
+                            Sheet: 82182000-8c23-412b-af1d-b54242e478bc:SpriteSheet
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
+                    c81946b1644d66dc0445609922886b2c: !softy.SpriteTest,softy.Game
+                        Id: 25027251-fcea-4c00-9c0b-4bebf65fa9a0

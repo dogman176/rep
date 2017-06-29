@@ -25,7 +25,7 @@ namespace softy
         public override void Update()
         {
             // Do something every new frame.
-            if ((DateTime.Now - lastFrame) > new TimeSpan(0, 0, 1))
+            if ((DateTime.Now - lastFrame) > new TimeSpan(0, 0, 0))
             {
                 sprite.CurrentFrame += 1;
                 lastFrame = DateTime.Now;
