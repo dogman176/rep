@@ -12,7 +12,7 @@ namespace softy
     public class SpriteTest : AsyncScript
     {
         private SpriteFromSheet sprite;
-        private int Stuff=0;
+        private int x=0;
 
         public override async Task Execute()
         {
@@ -27,15 +27,20 @@ namespace softy
                 }else
                     if(Input.IsKeyDown(Keys.A))
                 {
-                    Anim(Keys.A);
+                    Walk(Keys.A);
                 }else
                     if (Input.IsKeyDown(Keys.D))
                 {
-                    Anim(Keys.D);
+                    Walk(Keys.D);
+                }else
+                    if(Input.IsKeyDown(Keys.W))
+                {
+                    //Jump();
                 }
             }
         }
-        private void Anim(Keys PKey)
+
+        private void Walk(Keys PKey)
         {
             if (PKey == Keys.A)
             {
@@ -48,12 +53,24 @@ namespace softy
                 Entity.Transform.Scale.X = 1;
                 Entity.Transform.Position.X += 0.1f;
             }
-            if (Stuff > 5)
+            if (x > 5)
             {
                 sprite.CurrentFrame += 1;
-                Stuff = 0;
+                x = 0;
             }
-            Stuff++; 
+            x++; 
         }
+
+       /* private void Jump()
+        {
+            for (int x = 0; x < 5; x++)
+            {
+                Entity.Transform.Position.Y += 0.2f;               
+            }
+            while (Entity.Transform.Position.Y == 0)
+            {
+                Entity.Transform.Position.Y -= 0.1f;
+            }
+        }*/
     }
 }

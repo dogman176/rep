@@ -62,7 +62,7 @@ namespace softy
             pitch = 0;
 
             // Move with keyboard
-            if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Up))
+            if (Input.IsKeyDown(Keys.Up))
             {
                 translation.Z = -KeyboardMovementSpeed.Z;
             }
