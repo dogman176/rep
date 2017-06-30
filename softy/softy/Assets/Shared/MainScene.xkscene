@@ -18,8 +18,8 @@ Hierarchy:
                 Components:
                     1cdf5ea1abdf833eb35ce5b9e19dea78: !TransformComponent
                         Id: 1e9fd1b3-68d6-4829-8d48-888e4d311abf
-                        Position: {X: 6.596385, Y: 0.278182983, Z: 0.7043134}
-                        Rotation: {X: 0.0, Y: 0.477415919, Z: 0.0, W: 0.878677368}
+                        Position: {X: 1.671, Y: 0.0, Z: 5.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
                     d636578b009578f6ebf0e5a67d89315c: !CameraComponent
@@ -82,9 +82,9 @@ Hierarchy:
                 Components:
                     39d3b45fe44e39fa964b894181f5ad37: !TransformComponent
                         Id: 9d3b056f-a874-4ce0-9110-a530c9b75f03
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -3.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
                         Children: {}
                     9f0baaf338d2d1b3281c8da873c25d09: !ModelComponent
                         Id: 7ed69e20-1d67-4339-a8a6-d01ce04f6ebe
@@ -98,7 +98,7 @@ Hierarchy:
                 Components:
                     ee682a9a845a53879968079a91b9fead: !TransformComponent
                         Id: 353031a8-76b0-4ee6-8696-6ccabcbce9d6
-                        Position: {X: 1.670773, Y: 0.0, Z: -5.84334}
+                        Position: {X: 1.671, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -109,3 +109,6 @@ Hierarchy:
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     c81946b1644d66dc0445609922886b2c: !softy.SpriteTest,softy.Game
                         Id: 25027251-fcea-4c00-9c0b-4bebf65fa9a0
+                    4a65ec6b14ff0f2deb274c40af0b2606: !softy.LockEntityX,softy.Game
+                        Id: 36e272cf-2bfd-4d82-8d5a-054179788cbe
+                        EntityToAttach: Camera
