@@ -112,3 +112,9 @@ Hierarchy:
                     4a65ec6b14ff0f2deb274c40af0b2606: !softy.LockEntityX,softy.Game
                         Id: 36e272cf-2bfd-4d82-8d5a-054179788cbe
                         EntityToAttach: Camera
+                        PositionX: true
+                        OffsetX: 0
+                        PositionY: false
+                        OffsetY: 0
+                        PositionZ: false
+                        OffsetZ: 0

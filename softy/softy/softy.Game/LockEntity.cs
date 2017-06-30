@@ -1,8 +1,5 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
-using SiliconStudio.Xenko.Input;
-using SiliconStudio.Core.Native;
 using SiliconStudio.Xenko.Engine;
 
 namespace softy
@@ -10,19 +7,38 @@ namespace softy
     public class LockEntityX : AsyncScript
     {
         public string EntityToAttach = "Camera";
+        public bool PositionX = false;
+        public int OffsetX = 0;
+        public bool PositionY = false;
+        public int OffsetY = 0;
+        public bool PositionZ = false;
+        public int OffsetZ = 0;
+
         public override async Task Execute()
         {
-            await Script.NextFrame();
-            var GameCamera = (from All_Entities in this.SceneSystem.SceneInstance
+            var LockedEntity = (from All_Entities in this.SceneSystem.SceneInstance
                               where All_Entities.Name == EntityToAttach
                               select All_Entities).FirstOrDefault();
-            if (GameCamera == null) return;
+            if (LockedEntity == null) return;
 
             while (Game.IsRunning)
             {
                 await Script.NextFrame();
-                if (GameCamera.Transform.Position.X != Entity.Transform.Position.X)
-                    GameCamera.Transform.Position.X = Entity.Transform.Position.X;
+                if (PositionX)
+                {
+                    if (LockedEntity.Transform.Position.X != Entity.Transform.Position.X+OffsetX)
+                        LockedEntity.Transform.Position.X = Entity.Transform.Position.X+OffsetX;
+                }
+                if (PositionY)
+                {
+                    if (LockedEntity.Transform.Position.Y != Entity.Transform.Position.Y + OffsetY)
+                        LockedEntity.Transform.Position.Y = Entity.Transform.Position.Y + OffsetY;
+                }
+                if (PositionZ)
+                {
+                    if (LockedEntity.Transform.Position.Z != Entity.Transform.Position.Z + OffsetZ)
+                        LockedEntity.Transform.Position.Z = Entity.Transform.Position.Z + OffsetZ;
+                }
             }
         }
     }
