@@ -11,6 +11,7 @@ Hierarchy:
         - 59943604-2dc0-4bdf-845f-a0934e13cc67
         - 7568e5b9-df51-4d94-bd2c-aa465b2e9034
         - e403335f-cda9-4121-9c46-975cbbb719ed
+        - d897f87e-a6e9-492d-aae4-091e8a781ebd
     Parts:
         -   Entity:
                 Id: 0d819940-5e9b-464c-a496-48378a792cdb
@@ -78,7 +79,7 @@ Hierarchy:
                             Skybox: 783ebe7f-48e7-4ca1-8f3d-f1fe1fc59117:Skybox
         -   Entity:
                 Id: 7568e5b9-df51-4d94-bd2c-aa465b2e9034
-                Name: Entity
+                Name: Ball
                 Components:
                     39d3b45fe44e39fa964b894181f5ad37: !TransformComponent
                         Id: 9d3b056f-a874-4ce0-9110-a530c9b75f03
@@ -93,8 +94,39 @@ Hierarchy:
                     20ec9f802ac3d07833aeb631860ec484: !softy.hard,softy.Game
                         Id: 32fe8172-079e-42c8-b8ea-04e80a775b52
         -   Entity:
+                Id: d897f87e-a6e9-492d-aae4-091e8a781ebd
+                Name: Cube
+                Components:
+                    0d06fe6fd1db1897d4671fef7438aac2: !TransformComponent
+                        Id: 720c8873-7b81-4573-b8b6-0d2c3961c684
+                        Position: {X: -1.642522, Y: -2.056338, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    e3fa7f82aad403ae0a9a6dcd660e2bd6: !ModelComponent
+                        Id: f08a2757-487f-46c4-8d58-106e6d156d78
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            009dd88867b2430f548e9a87366d0c51~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+                    2dcc4283ec0a151b266e32edb530b950: !StaticColliderComponent
+                        Id: 5a024b48-362f-4cff-8bb4-252eeb03429a
+                        CollisionGroup: StaticFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            572b5dbd29d842664c9b19a19a15f0c5: !BoxColliderShapeDesc
+                                Is2D: true
+                                Size: {X: 15.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
                 Id: e403335f-cda9-4121-9c46-975cbbb719ed
-                Name: Entity
+                Name: Player
                 Components:
                     ee682a9a845a53879968079a91b9fead: !TransformComponent
                         Id: 353031a8-76b0-4ee6-8696-6ccabcbce9d6
@@ -105,7 +137,7 @@ Hierarchy:
                     4c3968c8b3ad3ddf6f244248745b0f0d: !SpriteComponent
                         Id: 1f652581-5e5d-439c-a9e3-dfeaebe0b39f
                         SpriteProvider: !SpriteFromSheet
-                            Sheet: 82182000-8c23-412b-af1d-b54242e478bc:SpriteSheet
+                            Sheet: 82182000-8c23-412b-af1d-b54242e478bc:Sprites/PlayerRun
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
                     c81946b1644d66dc0445609922886b2c: !softy.SpriteTest,softy.Game
                         Id: 25027251-fcea-4c00-9c0b-4bebf65fa9a0
@@ -114,7 +146,28 @@ Hierarchy:
                         EntityToAttach: Camera
                         PositionX: true
                         OffsetX: 0
-                        PositionY: false
+                        PositionY: true
                         OffsetY: 0
                         PositionZ: false
                         OffsetZ: 0
+                    02ad191d2e09cd8f59e6f4a21564eee0: !CharacterComponent
+                        Id: 0a48586c-1ca9-4ef0-a48d-8d274ffd0344
+                        CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 4.0
+                        Gravity: -9.81
+                        ColliderShapes:
+                            a06e27232da43ccd967ed7abf5d9e7a5: !BoxColliderShapeDesc
+                                Is2D: true
+                                Size: {X: 1.4, Y: 2.2, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    e2c64ba60485bc5b135e01fd29fadabd: !softy.Character_Jump,softy.Game
+                        Id: 29ff3a8c-8af3-4fd7-8b6b-022bb5bdb437

@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
+using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Input;
-using SiliconStudio.Core.Native;
+using SiliconStudio.Xenko.Physics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Rendering.Sprites;
 
@@ -12,12 +13,13 @@ namespace softy
     public class SpriteTest : AsyncScript
     {
         private SpriteFromSheet sprite;
+        private CharacterComponent CharPlayer;
         private int x=0;
 
         public override async Task Execute()
         {
             sprite = Entity.Get<SpriteComponent>().SpriteProvider as SpriteFromSheet;
-
+            CharPlayer = Entity.Get<CharacterComponent>() as CharacterComponent;
             while (Game.IsRunning)
             {
                 await Script.NextFrame();
@@ -27,50 +29,54 @@ namespace softy
                 }else
                     if(Input.IsKeyDown(Keys.A))
                 {
-                    Walk(Keys.A);
+                    //Find a way to read Velocity!
+                    Entity.Transform.Scale.X = -1;
+                    float Inc = -0.01f;
+                    while (Input.IsKeyDown(Keys.A))
+                    {
+                        Walk();
+                        await Script.NextFrame();
+                        if (Inc > -1.9f)
+                        {
+                            CharPlayer.SetVelocity(new Vector3(Inc, 0, 0));
+                            if (Inc > -0.9f) { Inc -= 0.005f; await Script.NextFrame(); }
+                            await Script.NextFrame();
+                            Inc -= 0.015f;
+                        }
+                        if (Inc > -2.3f) Inc -= 0.1f;
+                    }
+                    CharPlayer.SetVelocity(new Vector3(0, 0, 0));
                 }else
                     if (Input.IsKeyDown(Keys.D))
                 {
-                    Walk(Keys.D);
-                }else
-                    if(Input.IsKeyDown(Keys.W))
-                {
-                    //Jump();
+                    Entity.Transform.Scale.X = 1;
+                    float Inc = 0.01f;
+                    while (Input.IsKeyDown(Keys.D))
+                    {
+                        Walk();
+                        await Script.NextFrame();
+                        if (Inc < 1.9f)
+                        {
+                            CharPlayer.SetVelocity(new Vector3(Inc, 0, 0));
+                            if (Inc < 0.9f) { Inc += 0.005f; await Script.NextFrame(); }
+                            await Script.NextFrame();
+                            Inc += 0.015f;
+                        }
+                        if (Inc < 2.3f) Inc += 0.1f;
+                    }
+                    CharPlayer.SetVelocity(new Vector3(0, 0, 0));
                 }
             }
         }
 
-        private void Walk(Keys PKey)
+        private void Walk()
         {
-            if (PKey == Keys.A)
-            {
-                Entity.Transform.Scale.X = -1;
-                Entity.Transform.Position.X -= 0.1f;
-            }
-            else
-            if (PKey == Keys.D)
-            {
-                Entity.Transform.Scale.X = 1;
-                Entity.Transform.Position.X += 0.1f;
-            }
             if (x > 5)
             {
                 sprite.CurrentFrame += 1;
                 x = 0;
             }
-            x++; 
+            x++;
         }
-
-       /* private void Jump()
-        {
-            for (int x = 0; x < 5; x++)
-            {
-                Entity.Transform.Position.Y += 0.2f;               
-            }
-            while (Entity.Transform.Position.Y == 0)
-            {
-                Entity.Transform.Position.Y -= 0.1f;
-            }
-        }*/
     }
 }

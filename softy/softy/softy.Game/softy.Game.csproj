@@ -165,6 +165,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BasicCameraController.cs" />
+    <Compile Include="Character_Jump.cs" />
     <Compile Include="hard.cs" />
     <Compile Include="LockEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
