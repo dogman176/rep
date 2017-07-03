@@ -16,6 +16,7 @@ namespace softy
                 await Script.NextFrame();
                 if (Input.IsKeyDown(Keys.W) || Input.IsKeyDown(Keys.Space))
                 {
+                    if(CharPlayer.IsGrounded)
                     CharPlayer.Jump();
                 }
             }

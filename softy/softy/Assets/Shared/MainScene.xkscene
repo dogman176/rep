@@ -83,9 +83,9 @@ Hierarchy:
                 Components:
                     39d3b45fe44e39fa964b894181f5ad37: !TransformComponent
                         Id: 9d3b056f-a874-4ce0-9110-a530c9b75f03
-                        Position: {X: 0.0, Y: 0.0, Z: -3.0}
+                        Position: {X: 0.0, Y: -1.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 2.0, Y: 2.0, Z: 2.0}
+                        Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
                     9f0baaf338d2d1b3281c8da873c25d09: !ModelComponent
                         Id: 7ed69e20-1d67-4339-a8a6-d01ce04f6ebe
@@ -120,7 +120,7 @@ Hierarchy:
                         IsTrigger: false
                         ColliderShapes:
                             572b5dbd29d842664c9b19a19a15f0c5: !BoxColliderShapeDesc
-                                Is2D: true
+                                Is2D: false
                                 Size: {X: 15.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
@@ -145,11 +145,11 @@ Hierarchy:
                         Id: 36e272cf-2bfd-4d82-8d5a-054179788cbe
                         EntityToAttach: Camera
                         PositionX: true
-                        OffsetX: 0
+                        OffsetX: 0.0
                         PositionY: true
-                        OffsetY: 0
+                        OffsetY: 0.0
                         PositionZ: false
-                        OffsetZ: 0
+                        OffsetZ: 0.0
                     02ad191d2e09cd8f59e6f4a21564eee0: !CharacterComponent
                         Id: 0a48586c-1ca9-4ef0-a48d-8d274ffd0344
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
@@ -164,10 +164,20 @@ Hierarchy:
                         JumpSpeed: 4.0
                         Gravity: -9.81
                         ColliderShapes:
-                            a06e27232da43ccd967ed7abf5d9e7a5: !BoxColliderShapeDesc
+                            a06e27232da43ccd967ed7abf5d9e7a5: !CapsuleColliderShapeDesc
                                 Is2D: true
-                                Size: {X: 1.4, Y: 2.2, Z: 1.0}
+                                Length: 0.6
+                                Radius: 0.8
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                     e2c64ba60485bc5b135e01fd29fadabd: !softy.Character_Jump,softy.Game
                         Id: 29ff3a8c-8af3-4fd7-8b6b-022bb5bdb437
+                    bf7e816ebf11c6832e6b0a3056c72a69: !softy.LockEntityX,softy.Game
+                        Id: 556b989b-e6ea-48bd-a820-d0612e54df59
+                        EntityToAttach: Ball
+                        PositionX: true
+                        OffsetX: 2.0
+                        PositionY: false
+                        OffsetY: 0.0
+                        PositionZ: false
+                        OffsetZ: 0.0

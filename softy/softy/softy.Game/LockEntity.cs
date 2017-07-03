@@ -8,11 +8,11 @@ namespace softy
     {
         public string EntityToAttach = "Camera";
         public bool PositionX = false;
-        public int OffsetX = 0;
+        public float OffsetX = 0;
         public bool PositionY = false;
-        public int OffsetY = 0;
+        public float OffsetY = 0;
         public bool PositionZ = false;
-        public int OffsetZ = 0;
+        public float OffsetZ = 0;
 
         public override async Task Execute()
         {

@@ -16,12 +16,12 @@ namespace softy
                 await Script.NextFrame();
                 if (Input.IsKeyDown(Keys.Y))
                 {
-                    if (Entity.Transform.Position.Y < 4)
+                    if (Entity.Transform.Position.Y < 1.7)
                     {
                         Entity.Transform.Position.Y += 0.1f;
                     }
                     else
-                        while (Entity.Transform.Position.Y > 0)
+                        while (Entity.Transform.Position.Y > -1)
                         {
                             await Script.NextFrame();
                             Entity.Transform.Position.Y -= 0.1f;
