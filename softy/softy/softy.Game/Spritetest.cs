@@ -6,10 +6,12 @@ using SiliconStudio.Xenko.Physics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Rendering.Sprites;
 
+//I was going to write documentation for this
+// Until i realized it is pointles since this script is going to be changing so quickly 
+// that is might as well not exsist
+
 namespace softy
 {
-
-
     public class SpriteTest : AsyncScript
     {
         private SpriteFromSheet sprite;
@@ -29,21 +31,21 @@ namespace softy
                 }else
                     if(Input.IsKeyDown(Keys.A))
                 {
-                    //Find a way to read Velocity!
+                    //ToDo- Find a way to read Velocity!
                     Entity.Transform.Scale.X = -1;
-                    float Inc = -0.01f;
+                    float Increment = -0.01f;
                     while (Input.IsKeyDown(Keys.A))
                     {
                         Walk();
                         await Script.NextFrame();
-                        if (Inc > -1.9f)
+                        if (Increment > -1.9f)
                         {
-                            CharPlayer.SetVelocity(new Vector3(Inc, 0, 0));
-                            if (Inc > -0.9f) { Inc -= 0.005f; await Script.NextFrame(); }
+                            CharPlayer.SetVelocity(new Vector3(Increment, 0, 0));
+                            if (Increment > -0.9f) { Increment -= 0.005f; await Script.NextFrame(); }
                             await Script.NextFrame();
-                            Inc -= 0.015f;
+                            Increment -= 0.015f;
                         }
-                        if (Inc > -2.3f) Inc -= 0.1f;
+                        if (Increment > -2.3f) Increment -= 0.1f;
                     }
                     CharPlayer.SetVelocity(new Vector3(0, 0, 0));
                 }else

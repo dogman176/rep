@@ -3,6 +3,8 @@ using SiliconStudio.Xenko.Input;
 using SiliconStudio.Xenko.Physics;
 using SiliconStudio.Xenko.Engine;
 
+//Used to make the character jump
+
 namespace softy
 {
     public class Character_Jump : AsyncScript

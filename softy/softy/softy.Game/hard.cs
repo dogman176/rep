@@ -5,6 +5,8 @@ using SiliconStudio.Core.Mathematics;
 using SiliconStudio.Xenko.Engine;
 using SiliconStudio.Xenko.Input;
 
+//This a test script used to move the ball attached to the player
+
 namespace softy
 {
   public class hard : AsyncScript
