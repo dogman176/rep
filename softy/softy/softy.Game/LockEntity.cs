@@ -6,7 +6,7 @@ using SiliconStudio.Xenko.Engine;
 
 namespace softy
 {
-    public class LockEntityX : AsyncScript
+    public class _LockEntityX : AsyncScript
     {
         //Name of entity
         public string EntityToAttach = "Camera";

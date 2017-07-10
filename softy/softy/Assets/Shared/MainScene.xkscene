@@ -18,6 +18,13 @@ Hierarchy:
         - 8ef235a7-a050-486d-93d3-d0fe2fc4aac8
         - 1f41da13-d34c-471e-ba08-a9fcd4ebc1ef
         - aa0dccad-3fe1-4175-bd69-25e6a126170a
+        - 50e29f79-0076-4ed6-9800-9c1e27220e9a
+        - ed62732f-4b68-45c5-8475-83f3e150ee10
+        - af46e8c6-3010-4af7-b90c-f3f9d1f268e4
+        - 9d0ec50f-eb9c-490f-9b39-556a2e1c55dc
+        - 2b632c02-887e-4134-85cb-eedf9bab64f3
+        - deba29b7-6388-4d4f-95c2-de2b334abcf6
+        - d4f67f16-f9ca-4390-8b75-bf23ba6efca0
     Parts:
         -   Folder: Cube collection
             Entity:
@@ -146,6 +153,49 @@ Hierarchy:
                                 PartitionMode: !LightDirectionalShadowMap.PartitionLogarithmic {}
                                 BiasParameters: {}
                         Intensity: 20.0
+        -   Folder: Ladder
+            Entity:
+                Id: 2b632c02-887e-4134-85cb-eedf9bab64f3
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 829a3f47-cf84-46ae-961c-8c4f3ae61a88
+                        Position: {X: 7.5, Y: -0.4, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: a354f60c-86af-47bc-9508-603ecaab9414
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Folder: Ladder
+            Entity:
+                Id: 50e29f79-0076-4ed6-9800-9c1e27220e9a
+                Name: Hitbox
+                Components:
+                    d75c5ca95ce991a49493e3a67306acac: !TransformComponent
+                        Id: e333a93f-4268-426d-ba28-76744b8db4f9
+                        Position: {X: 7.5, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ff4525c5186473ae3863ada39565323b: !StaticColliderComponent
+                        Id: 9116fc4c-af6d-4748-8e01-f9b9eaf2229b
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        ColliderShapes:
+                            ce90baa0b34d524ea6eef5f371d5f882: !BoxColliderShapeDesc
+                                Is2D: true
+                                Size: {X: 0.2, Y: 3.5, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: 59943604-2dc0-4bdf-845f-a0934e13cc67
                 Name: Skybox
@@ -169,7 +219,7 @@ Hierarchy:
                 Components:
                     39d3b45fe44e39fa964b894181f5ad37: !TransformComponent
                         Id: 9d3b056f-a874-4ce0-9110-a530c9b75f03
-                        Position: {X: 0.0, Y: -1.0, Z: -1.2}
+                        Position: {X: 0.0, Y: -1.5, Z: -1.2}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 0.5, Y: 0.5, Z: 0.5}
                         Children: {}
@@ -177,8 +227,8 @@ Hierarchy:
                         Id: 7ed69e20-1d67-4339-a8a6-d01ce04f6ebe
                         Model: 2a97e73d-3d00-411a-bc16-c7b44d609c70:Sphere
                         Materials: {}
-                    20ec9f802ac3d07833aeb631860ec484: !softy.hard,softy.Game
-                        Id: 32fe8172-079e-42c8-b8ea-04e80a775b52
+                    73e2688c196dda44d10c9a40ab04d213: !softy._hard,softy.Game
+                        Id: 7e4b9d2f-dfb1-4a83-8577-eb4b04bc85f6
         -   Folder: Cube collection
             Entity:
                 Id: 8ef235a7-a050-486d-93d3-d0fe2fc4aac8
@@ -192,6 +242,22 @@ Hierarchy:
                         Children: {}
                     1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
                         Id: 47a2e1b0-dcda-4c66-bc62-7accde829dc7
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Folder: Ladder
+            Entity:
+                Id: 9d0ec50f-eb9c-490f-9b39-556a2e1c55dc
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 7fbcfb37-ed11-4ae8-80cc-e8107f48b511
+                        Position: {X: 7.5, Y: -1.2, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: 0d77907c-74f9-4c9a-92d4-b88a6b3cd66b
                         Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
                         Materials:
                             abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
@@ -211,6 +277,38 @@ Hierarchy:
                         Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
                         Materials:
                             abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Folder: Ladder
+            Entity:
+                Id: af46e8c6-3010-4af7-b90c-f3f9d1f268e4
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 25ce7616-ff1f-448e-b4a8-0b2305e17472
+                        Position: {X: 8.0, Y: 0.0, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 4.0, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: 3792d485-376c-4846-9de5-15ac7de22fa1
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Folder: Ladder
+            Entity:
+                Id: d4f67f16-f9ca-4390-8b75-bf23ba6efca0
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 80748860-7a0a-4444-a653-f2f5c4784518
+                        Position: {X: 7.5, Y: 1.2, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: edb6720f-e5d1-42ee-ba42-b1289dc79fe2
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
         -   Folder: Cube collection
             Entity:
                 Id: d897f87e-a6e9-492d-aae4-091e8a781ebd
@@ -218,9 +316,9 @@ Hierarchy:
                 Components:
                     0d06fe6fd1db1897d4671fef7438aac2: !TransformComponent
                         Id: 720c8873-7b81-4573-b8b6-0d2c3961c684
-                        Position: {X: -1.642522, Y: -2.0, Z: 0.0}
+                        Position: {X: 0.0, Y: -2.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                        Scale: {X: 15.0, Y: 0.4, Z: 1.6}
+                        Scale: {X: 18.0, Y: 0.4, Z: 1.6}
                         Children: {}
                     e3fa7f82aad403ae0a9a6dcd660e2bd6: !ModelComponent
                         Id: f08a2757-487f-46c4-8d58-106e6d156d78
@@ -243,6 +341,22 @@ Hierarchy:
                                 Size: {X: 1.0, Y: 1.0, Z: 1.0}
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Folder: Ladder
+            Entity:
+                Id: deba29b7-6388-4d4f-95c2-de2b334abcf6
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 39e98e60-a569-4dab-b565-8d8525ce1c53
+                        Position: {X: 7.5, Y: 0.4, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: d63babe2-4b7d-488b-8bb5-65c706d96e41
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
         -   Entity:
                 Id: e403335f-cda9-4121-9c46-975cbbb719ed
                 Name: Player
@@ -258,19 +372,9 @@ Hierarchy:
                         SpriteProvider: !SpriteFromSheet
                             Sheet: 82182000-8c23-412b-af1d-b54242e478bc:Sprites/PlayerRun
                         Color: {R: 1.0, G: 1.0, B: 1.0, A: 1.0}
-                    c81946b1644d66dc0445609922886b2c: !softy.SpriteTest,softy.Game
-                        Id: 25027251-fcea-4c00-9c0b-4bebf65fa9a0
-                    4a65ec6b14ff0f2deb274c40af0b2606: !softy.LockEntityX,softy.Game
-                        Id: 36e272cf-2bfd-4d82-8d5a-054179788cbe
-                        EntityToAttach: Camera
-                        PositionX: true
-                        OffsetX: 0.0
-                        PositionY: true
-                        OffsetY: 0.0
-                        PositionZ: false
-                        OffsetZ: 0.0
                     02ad191d2e09cd8f59e6f4a21564eee0: !CharacterComponent
                         Id: 0a48586c-1ca9-4ef0-a48d-8d274ffd0344
+                        CollisionGroup: CharacterFilter
                         CanCollideWith: DefaultFilter, StaticFilter, KinematicFilter, SensorTrigger, CharacterFilter, CustomFilter1, CustomFilter2, CustomFilter3, CustomFilter4, CustomFilter5, CustomFilter6, CustomFilter7, CustomFilter8, CustomFilter9, CustomFilter10
                         CanSleep: false
                         Restitution: 0.0
@@ -289,10 +393,21 @@ Hierarchy:
                                 Radius: 0.8
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    e2c64ba60485bc5b135e01fd29fadabd: !softy.Character_Jump,softy.Game
-                        Id: 29ff3a8c-8af3-4fd7-8b6b-022bb5bdb437
-                    bf7e816ebf11c6832e6b0a3056c72a69: !softy.LockEntityX,softy.Game
-                        Id: 556b989b-e6ea-48bd-a820-d0612e54df59
+                    b114c0a9d61433e2a66c1dd22ebc8860: !softy._PlayerMovement,softy.Game
+                        Id: 6857d3cf-a727-4605-924a-9f36f6620c54
+                    4ff5ff9458912959c8a47ba79e8916e6: !softy._Character_Jump,softy.Game
+                        Id: ba1f20b9-6401-424a-a224-f1d679dbd026
+                    05c0597b0a1ca4a555d92c8f44f5d120: !softy._LockEntityX,softy.Game
+                        Id: dcdabd63-2751-4b93-82e5-1e05626e7c69
+                        EntityToAttach: Camera
+                        PositionX: true
+                        OffsetX: 0.0
+                        PositionY: true
+                        OffsetY: 0.0
+                        PositionZ: false
+                        OffsetZ: 0.0
+                    2ee171c318d1f94489f23b5c6b8703a5: !softy._LockEntityX,softy.Game
+                        Id: 7db369aa-6f45-4680-901b-f31a0f4bc8ad
                         EntityToAttach: Ball
                         PositionX: true
                         OffsetX: 2.0
@@ -300,3 +415,19 @@ Hierarchy:
                         OffsetY: 0.0
                         PositionZ: false
                         OffsetZ: 0.0
+        -   Folder: Ladder
+            Entity:
+                Id: ed62732f-4b68-45c5-8475-83f3e150ee10
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 05fd99fd-15ef-42bd-bfe7-a8d9c7cfa1b3
+                        Position: {X: 7.0, Y: 0.0, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 4.0, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: 1210e575-b514-49c4-bad3-73f88c7af48e
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material

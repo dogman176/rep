@@ -13,7 +13,7 @@ namespace softy
     /// The entity can be moved using W, A, S, D, Q and E, arrow keys or dragging/scaling using multi-touch.
     /// Rotation is achieved using the Numpad, the mouse while holding the right mouse button, or dragging using single-touch.
     /// </remarks>
-    public class BasicCameraController : SyncScript
+    public class _BasicCameraController : SyncScript
     {
         private const float MaximumPitch = MathUtil.PiOverTwo * 0.99f;
 

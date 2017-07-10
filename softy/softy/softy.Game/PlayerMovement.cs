@@ -12,7 +12,7 @@ using SiliconStudio.Xenko.Rendering.Sprites;
 
 namespace softy
 {
-    public class SpriteTest : AsyncScript
+    public class _PlayerMovement : AsyncScript
     {
         private SpriteFromSheet sprite;
         private CharacterComponent CharPlayer;

@@ -7,7 +7,7 @@ using SiliconStudio.Xenko.Engine;
 
 namespace softy
 {
-    public class Character_Jump : AsyncScript
+    public class _Character_Jump : AsyncScript
     {
         private CharacterComponent CharPlayer;
         public override async Task Execute()

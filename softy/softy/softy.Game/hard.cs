@@ -9,7 +9,7 @@ using SiliconStudio.Xenko.Input;
 
 namespace softy
 {
-  public class hard : AsyncScript
+  public class _hard : AsyncScript
     {
         public override async Task Execute()
         {
@@ -23,7 +23,7 @@ namespace softy
                         Entity.Transform.Position.Y += 0.1f;
                     }
                     else
-                        while (Entity.Transform.Position.Y > -1)
+                        while (Entity.Transform.Position.Y > -1.5)
                         {
                             await Script.NextFrame();
                             Entity.Transform.Position.Y -= 0.1f;
