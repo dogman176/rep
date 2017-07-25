@@ -1,0 +1,60 @@
+!SceneAsset
+Id: c08901bd-b12b-4272-8887-c62b7ea70c94
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+ChildrenIds: []
+Parent: adbc227a-8296-4c64-bbd4-cdb5d32275c3:MainScene
+Offset: {X: 0.0, Y: 0.0, Z: 0.0}
+Hierarchy:
+    RootPartIds:
+        - de712a12-133f-4aea-9934-eea5e4d90f5c
+        - 6a373157-aa18-4d6c-9ee9-80c1bf033abd
+        - e52ed15d-af7a-419a-8758-1781b7773aba
+    Parts:
+        -   Entity:
+                Id: 6a373157-aa18-4d6c-9ee9-80c1bf033abd
+                Name: Skybox
+                Components:
+                    fcff09e6544950cbeca4a89d311289dd: !TransformComponent
+                        Id: 77e30c79-0274-4c51-8e69-82203a824808
+                        Position: {X: 0.0, Y: 2.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    23fd337145fe51d0dc87a0b608c0c777: !BackgroundComponent
+                        Id: 3f35cd45-474a-4b6f-9f24-c77a59c0ca46
+                        Texture: 9ffbeb96-cf5b-44a7-b423-6e3a8ca3b3a4:Skybox Texture
+                    aa66fd0d3bc75a9b65196fcd17b6b076: !LightComponent
+                        Id: 42be4fa4-293a-4f5e-bf8a-8400e37ddde0
+                        Type: !LightSkybox
+                            Skybox: 783ebe7f-48e7-4ca1-8f3d-f1fe1fc59117:Skybox
+        -   Entity:
+                Id: de712a12-133f-4aea-9934-eea5e4d90f5c
+                Name: Cube
+                Components:
+                    6a4e2f1ce1caf3df5212f54ed486cdde: !TransformComponent
+                        Id: cdbb3c68-2c14-4b03-ad40-c94678115434
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: -0.0174524058, Z: 0.0, W: 0.9998477}
+                        Scale: {X: 5.0, Y: 0.1, Z: 3.0}
+                        Children: {}
+                    21fa6694f5833f9a7c2d7a5f0af5c937: !ModelComponent
+                        Id: 3c9d2586-4ab0-4192-89e4-65dbd3137604
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            b0723400446496537dbc8bbc7e4d27c2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Entity:
+                Id: e52ed15d-af7a-419a-8758-1781b7773aba
+                Name: Camera
+                Components:
+                    950247aa748ab171b80fdbbca4525cb7: !TransformComponent
+                        Id: c9e6d309-cd20-4693-87fb-27f47945cf80
+                        Position: {X: 0.0, Y: 0.0, Z: 2.37993169}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    1813beb2b4e813c04df7270abaa369b5: !CameraComponent
+                        Id: a196682e-a39a-417f-873a-a13d139039d2
+                        Name: null
+                        Projection: Perspective
+                        Slot: 7d8bdf96-c595-440a-a482-e3633723aa35

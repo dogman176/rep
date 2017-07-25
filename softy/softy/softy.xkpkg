@@ -47,4 +47,6 @@ Profiles:
 ExplicitFolders: []
 Bundles: []
 TemplateFolders: []
-RootAssets: []
+RootAssets:
+    - 58ffb32a-ce86-4daf-bb39-db95368377fb:Scene2D
+    - c08901bd-b12b-4272-8887-c62b7ea70c94:Scene3D

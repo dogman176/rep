@@ -1,0 +1,130 @@
+!PrefabAsset
+Id: 658f7c1f-ad5d-49d8-894c-bc259d0094d9
+SerializedVersion: {Xenko: 2.0.0.0}
+Tags: []
+Hierarchy:
+    RootPartIds:
+        - f6968359-1836-48b9-94b2-710eef47d4a3
+        - fd8d1107-3278-4213-abb1-e3c96adbed48
+        - 976560ed-6bd0-4dfd-9903-20adea95db2b
+        - e9d81d8d-3beb-4bdd-96ab-724e77cfc5dd
+        - 54b4e40f-9f97-40eb-a592-674caf20ae58
+        - 9f348e4c-ac6d-454e-99c1-3f844ad848df
+        - 919ae83e-334a-4c29-a8a8-6de866901d2f
+    Parts:
+        -   Entity:
+                Id: 54b4e40f-9f97-40eb-a592-674caf20ae58
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 75cf886c-8492-4cc2-b303-8c97d30bc6d0
+                        Position: {X: 0.5, Y: 0.0, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 4.0, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: 3bd2d13c-30d3-4ce1-a60b-a662bd12277e
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Entity:
+                Id: 919ae83e-334a-4c29-a8a8-6de866901d2f
+                Name: Hitbox
+                Components:
+                    d75c5ca95ce991a49493e3a67306acac: !TransformComponent
+                        Id: 5bf0c40b-f9ec-4896-824a-8e10a7c1df43
+                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    ff4525c5186473ae3863ada39565323b: !StaticColliderComponent
+                        Id: dde8cf5e-b553-43d5-a2a1-2ff22d439dc6
+                        CanCollideWith: CharacterFilter
+                        CanSleep: true
+                        Restitution: 0.0
+                        Friction: 0.0
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: true
+                        ColliderShapes:
+                            ce90baa0b34d524ea6eef5f371d5f882: !BoxColliderShapeDesc
+                                Is2D: true
+                                Size: {X: 0.2, Y: 3.5, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+        -   Entity:
+                Id: 976560ed-6bd0-4dfd-9903-20adea95db2b
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 6c7fe1cc-5639-4f0b-bac6-3b78ddaa0d0d
+                        Position: {X: 0.0, Y: -0.4, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: f170c13f-fec3-4173-a423-2ec8a3be8f32
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Entity:
+                Id: 9f348e4c-ac6d-454e-99c1-3f844ad848df
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 3fde2ad0-f064-4a14-b3c3-f7bd040697f0
+                        Position: {X: -0.5, Y: 0.0, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 0.1, Y: 4.0, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: e391baf6-14d5-4a3e-868c-3367240b9d33
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Entity:
+                Id: e9d81d8d-3beb-4bdd-96ab-724e77cfc5dd
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: ba4ef12b-2a8b-410d-9746-46444e11a259
+                        Position: {X: 0.0, Y: -1.2, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: 4b6ab58d-f6d0-47d3-bfda-42559c6da6ef
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Entity:
+                Id: f6968359-1836-48b9-94b2-710eef47d4a3
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: a4b443bc-f61e-46f7-9cd0-ef077ee1e223
+                        Position: {X: 0.0, Y: 1.2, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: af525a1f-2252-4ade-894e-bfed507321af
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+        -   Entity:
+                Id: fd8d1107-3278-4213-abb1-e3c96adbed48
+                Name: Cube
+                Components:
+                    0e2dcc4ddcfca23df6266b8476d07f1a: !TransformComponent
+                        Id: 25832eea-e220-47f8-a199-f045f244a7d7
+                        Position: {X: 0.0, Y: 0.4, Z: -0.723026752}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 0.1, Z: 0.1}
+                        Children: {}
+                    1eef4aa728e92c98092fe3a0d4de4f8e: !ModelComponent
+                        Id: 692a4256-d14d-4996-98b6-f078a56a812a
+                        Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
+                        Materials:
+                            abe85288eda739adfbac95bd1eef2be2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
