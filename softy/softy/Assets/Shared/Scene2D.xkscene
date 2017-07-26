@@ -226,7 +226,7 @@ Hierarchy:
                         Id: 7ed69e20-1d67-4339-a8a6-d01ce04f6ebe
                         Model: 2a97e73d-3d00-411a-bc16-c7b44d609c70:Sphere
                         Materials: {}
-                    73e2688c196dda44d10c9a40ab04d213: !softy._hard,softy.Game
+                    a25654aae528fa8564bbc15ab89e615c: !softy._hard,softy.Game
                         Id: 7e4b9d2f-dfb1-4a83-8577-eb4b04bc85f6
         -   Entity:
                 Id: 83d7fb53-e8df-4fac-8521-7da3baf492bb
@@ -404,11 +404,11 @@ Hierarchy:
                                 Radius: 0.8
                                 LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
                                 LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
-                    b114c0a9d61433e2a66c1dd22ebc8860: !softy._PlayerMovement,softy.Game
+                    653962084646b3950250c29c1612b7ea: !softy._PlayerMovement,softy.Game
                         Id: 6857d3cf-a727-4605-924a-9f36f6620c54
-                    4ff5ff9458912959c8a47ba79e8916e6: !softy._Character_Jump,softy.Game
+                    dc39beef210ad13770b7970815d13ba4: !softy._Character_Jump,softy.Game
                         Id: ba1f20b9-6401-424a-a224-f1d679dbd026
-                    05c0597b0a1ca4a555d92c8f44f5d120: !softy._LockEntityX,softy.Game
+                    df9709e5715c8243b41739a1a196a936: !softy._LockEntityX,softy.Game
                         Id: dcdabd63-2751-4b93-82e5-1e05626e7c69
                         EntityToAttach: Camera
                         PositionX: true
@@ -417,7 +417,7 @@ Hierarchy:
                         OffsetY: 0.0
                         PositionZ: false
                         OffsetZ: 0.0
-                    2ee171c318d1f94489f23b5c6b8703a5: !softy._LockEntityX,softy.Game
+                    6949380517db8d18181675c6b90f9c5c: !softy._LockEntityX,softy.Game
                         Id: 7db369aa-6f45-4680-901b-f31a0f4bc8ad
                         EntityToAttach: Ball
                         PositionX: true

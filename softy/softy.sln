@@ -1,4 +1,4 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
@@ -180,6 +180,9 @@ Global
 		{FA12E411-030F-46D8-9909-2DFD3EF0CAA1}.Testing|Linux.ActiveCfg = Debug|Linux
 		{FA12E411-030F-46D8-9909-2DFD3EF0CAA1}.Testing|Mixed Platforms.ActiveCfg = Debug|Linux
 		{FA12E411-030F-46D8-9909-2DFD3EF0CAA1}.Testing|Windows.ActiveCfg = Debug|Linux
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{CEF6969D-9488-4842-B5D1-5D1C428B2F1C} = {1D1DF1F1-9D0F-4595-88A8-4C58C1001D0A}

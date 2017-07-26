@@ -10,14 +10,33 @@ Hierarchy:
     RootPartIds:
         - c8ac20a6-c6b1-4e5c-b165-8ed59e8e124d
         - cbcc8dc3-06de-418c-8ff0-335b0f3a8898
+        - 8d67e1a4-71af-4293-a600-85fc4d46c23e
     Parts:
+        -   Entity:
+                Id: 8d67e1a4-71af-4293-a600-85fc4d46c23e
+                Name: UI
+                Components:
+                    601e5214dc1f0cfdd8a3b3247533563c: !TransformComponent
+                        Id: 4c51bceb-05e9-4c22-aeb1-5547a28eb096
+                        Position: {X: 0.0, Y: 0.0, Z: -2.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children: {}
+                    3d25f1e25724a18c9cf35ada6b8396eb: !UIComponent
+                        Id: b5eed454-9bb6-4114-8e7e-66d8bdddc4b8
+                        Page: 2544ae80-5a8f-43de-aa86-c5fb45ae9f38:Dselect
+                        IsFullScreen: false
+                        Resolution: {X: 1280.0, Y: 720.0, Z: 1000.0}
+                        Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                    ef5190ceef52f36a825dd251c6d0a0b7: !softy._UIAtempt,softy.Game
+                        Id: cafbb6b8-0b5d-4c11-9240-a4282f97d871
         -   Entity:
                 Id: c8ac20a6-c6b1-4e5c-b165-8ed59e8e124d
                 Name: Camera
                 Components:
                     1e2fabfe93f51ce15b59b2c4d22c26f9: !TransformComponent
                         Id: b59fbd2b-0f12-4c79-bfdb-801e31b037ec
-                        Position: {X: 0.0, Y: 0.0, Z: 0.0}
+                        Position: {X: 0.0, Y: 0.0, Z: -0.05778559}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -25,7 +44,7 @@ Hierarchy:
                         Id: 07e6fc34-51e9-4599-8f33-2c33680ba376
                         Name: null
                         Projection: Orthographic
-                        OrthographicSize: 3.0
+                        OrthographicSize: 1.2
                         Slot: 7d8bdf96-c595-440a-a482-e3633723aa35
         -   Entity:
                 Id: cbcc8dc3-06de-418c-8ff0-335b0f3a8898
