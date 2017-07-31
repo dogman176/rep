@@ -166,8 +166,13 @@
   <ItemGroup>
     <Compile Include="BasicCameraController.cs" />
     <Compile Include="Character_Jump.cs" />
+    <Compile Include="Core\InputManagerExtensions.cs" />
+    <Compile Include="Core\Utils.cs" />
+    <Compile Include="FpsCamera.cs" />
     <Compile Include="hard.cs" />
     <Compile Include="LockEntity.cs" />
+    <Compile Include="Player\PlayerController.cs" />
+    <Compile Include="Player\PlayerInput.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PlayerMovement.cs" />
     <Compile Include="UI\UIAtempt.cs" />

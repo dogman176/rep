@@ -9,7 +9,7 @@ Hierarchy:
     RootPartIds:
         - de712a12-133f-4aea-9934-eea5e4d90f5c
         - 6a373157-aa18-4d6c-9ee9-80c1bf033abd
-        - e52ed15d-af7a-419a-8758-1781b7773aba
+        - 813f6e38-0b23-4497-a258-c271d57c6738
     Parts:
         -   Entity:
                 Id: 6a373157-aa18-4d6c-9ee9-80c1bf033abd
@@ -29,6 +29,50 @@ Hierarchy:
                         Type: !LightSkybox
                             Skybox: 783ebe7f-48e7-4ca1-8f3d-f1fe1fc59117:Skybox
         -   Entity:
+                Id: 813f6e38-0b23-4497-a258-c271d57c6738
+                Name: PlayerChar
+                Components:
+                    8a0fbe028d699070736912216df65feb: !TransformComponent
+                        Id: fe812810-5d84-4ab9-95b6-d25ca116544d
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
+                        Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                        Scale: {X: 1.0, Y: 1.0, Z: 1.0}
+                        Children:
+                            8ed2f3346542c7fbbb2cffd919518969: ref!! c9e6d309-cd20-4693-87fb-27f47945cf80
+                    e2dc2da603bdceeb1a4c9332ce9e6d53: !CharacterComponent
+                        Id: 84ca49dd-f755-4443-80c6-e7e3e1fcf844
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        FallSpeed: 10.0
+                        MaxSlope: {Radians: 0.7853982}
+                        JumpSpeed: 5.0
+                        Gravity: -10.0
+                        ColliderShapes:
+                            067a5707f244042a98db1fcb97690919: !CapsuleColliderShapeDesc
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
+                    456437b7a6ac12d0c1ccd5dd611e60f1: !softy.Player.PlayerController,softy.Game
+                        Id: d3954fb1-594a-45f7-893e-dc3222197162
+                        MaxRunSpeed: 5.0
+                    40bf08fc3c8f638bb9b73cf71fc52dd4: !softy.Player.PlayerInput,softy.Game
+                        Id: dc818737-6695-46c3-8fa3-24b35833f809
+                        DeadZone: 0.25
+                        Camera: null
+                        MouseSensitivity: 1.0
+                        KeysLeft:
+                            3a641093944daf3f81b475be6ea6d047: A
+                        KeysRight:
+                            173ea90d9c4fb7520848f0d4deadd526: D
+                        KeysUp:
+                            09f40f4bb1e8a7cfc12f9ab689d96e04: W
+                        KeysDown:
+                            77b31c62762cf0845aa2226314cd5bf6: S
+                        KeysReload: {}
+        -   Entity:
                 Id: de712a12-133f-4aea-9934-eea5e4d90f5c
                 Name: Cube
                 Components:
@@ -36,20 +80,35 @@ Hierarchy:
                         Id: cdbb3c68-2c14-4b03-ad40-c94678115434
                         Position: {X: 0.0, Y: 0.0, Z: 0.0}
                         Rotation: {X: 0.0, Y: -0.0174524058, Z: 0.0, W: 0.9998477}
-                        Scale: {X: 5.0, Y: 0.1, Z: 3.0}
+                        Scale: {X: 15.0, Y: 0.1, Z: 5.0}
                         Children: {}
                     21fa6694f5833f9a7c2d7a5f0af5c937: !ModelComponent
                         Id: 3c9d2586-4ab0-4192-89e4-65dbd3137604
                         Model: 17b81922-ad13-4d9d-872c-482a61d85f48:Cube
                         Materials:
                             b0723400446496537dbc8bbc7e4d27c2~0: 19340200-6b4e-4015-a994-5f656cd51430:Sphere Material
+                    c25d55984990f399c4eefb4aa5205d73: !StaticColliderComponent
+                        Id: 025e51e9-7e74-4577-90f0-4b6a980fd68b
+                        CanSleep: false
+                        Restitution: 0.0
+                        Friction: 0.5
+                        RollingFriction: 0.0
+                        CcdMotionThreshold: 0.0
+                        CcdSweptSphereRadius: 0.0
+                        IsTrigger: false
+                        ColliderShapes:
+                            99f37f5b4abb4e1ea0bb9a3a1c972757: !BoxColliderShapeDesc
+                                Is2D: false
+                                Size: {X: 1.0, Y: 1.0, Z: 1.0}
+                                LocalOffset: {X: 0.0, Y: 0.0, Z: 0.0}
+                                LocalRotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
         -   Entity:
                 Id: e52ed15d-af7a-419a-8758-1781b7773aba
                 Name: Camera
                 Components:
                     950247aa748ab171b80fdbbca4525cb7: !TransformComponent
                         Id: c9e6d309-cd20-4693-87fb-27f47945cf80
-                        Position: {X: 0.0, Y: 0.0, Z: 2.37993169}
+                        Position: {X: 0.0, Y: 0.5, Z: 0.0}
                         Rotation: {X: 0.0, Y: 0.0, Z: 0.0, W: 1.0}
                         Scale: {X: 1.0, Y: 1.0, Z: 1.0}
                         Children: {}
@@ -58,3 +117,7 @@ Hierarchy:
                         Name: null
                         Projection: Perspective
                         Slot: 7d8bdf96-c595-440a-a482-e3633723aa35
+                    bbef34c61ecb13491cc651fd179a8686: !softy.FpsCamera,softy.Game
+                        Id: d3f1ac2b-704a-467a-834b-8e57142b3cbf
+                        RotationSpeed: 2.355
+                        RotationAdaptationSpeed: 5.0
